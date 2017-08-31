@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)http://news.21cn.com/zt/2015/FrontDeveloper/?from=timeline&isappinstalled=0 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes, width=device-width">
+    <meta name="description" content="招募令">
+    <meta name="keywords" content="招募令">
+    <title>招募令</title> 
+    <link rel="stylesheet" href="css/index.css">
+   
+</head>
+<body>
+<div class="main" style="height: 578px;">
+   <img src="img/share.jpg" style="width:0;height:0; position: absolute;">
+   <div class="content" id="content1" style="height: 578px;">   
+		<img src="img/page13.png" id="img00" class="animated fadeIn" width="100%" style="z-index: 0; width: 329.46px; left: 50%; margin-left: -164.73px;"> 
+		<img src="img/page11.png" id="img02" class="animated fadeInDown" width="100%" style="z-index: 1; width: 329.46px; left: 50%; margin-left: -164.73px;">
+		<img src="img/page12.png" id="img01" class="animated bounceInLeft" width="100%" style="z-index: 2; width: 329.46px; left: 50%; margin-left: -164.73px;">
+   </div>
+   <div class="content" id="content2" style="height: 578px;">
+		  <img src="img/page21.png" id="img10" class="animated fadeInDown" width="100%" style="z-index: 0; width: 329.46px; left: 50%; margin-left: -164.73px;">
+		  <img src="img/page22.png" id="img11" class="animated fadeInLeft" width="100%" style="z-index: 1; width: 329.46px; left: 50%; margin-left: -164.73px;">
+   </div>
+  
+   <div class="content" id="content3" style="height: 578px;"> 
+	  <img src="img/page31.png" id="img20" class="animated fadeInDown" width="100%" style="z-index: 0; width: 329.46px; left: 50%; margin-left: -164.73px;">
+	  <img src="img/page32.png" id="img21" class="animated fadeInLeft" width="100%" style="z-index: 1; width: 329.46px; left: 50%; margin-left: -164.73px;">
+   </div>
+<!--   <div class="content" id="content5" style="height: 578px;"> 
+   	  <img src="img/page21.png" id="img20" class="animated fadeInLeft" width="100%" style="z-index: 0; width: 329.46px; left: 50%; margin-left: -164.73px;">
+   	  <img src="img/page22.png" id="img21" class="animated fadeInDown" width="100%" style="z-index: 1; width: 329.46px; left: 50%; margin-left: -164.73px;">
+  </div> -->
+  
+   <div class="content content4" id="content4" style="height: 578px;">
+   		<div class="form animated bounceInDown">
+			<form id="form1" method="post">
+				<input type="hidden" name="jobPosition" value="前端开发工程师">
+				<table>
+					<tbody>
+					<tr>
+						<td><span class="tdSpan">姓名</span></td>
+						<td class="tdinput"><input type="text" name="name" id="name" class="inf"><br>
+						<label class="check" id="nameCheck"></label></td>
+					</tr>
+					<tr>
+						<td><span class="tdSpan">手机号</span></td>
+						<td class="tdinput"><input type="tel" name="phoneNum" id="phoneNum" class="inf"><br>
+						<label class="check" id="phonecheck"></label></td>
+					</tr>
+					<tr>
+						<td><span class="tdSpan">邮箱</span></td>
+						<td class="tdinput"><input type="text" class="inf" name="email" id="email"><br>
+						<label class="check" id="emailcheck"></label></td>
+					</tr>
+					<tr>
+					  <td></td>
+					  <td class="tdinput"><input type="button" class="btn" id="submitBtn" value="提交"><label id="msgerror" class="msgerror"></label></td>
+					</tr>
+					<tr>
+						<td colspan="2">  <img src="img/page41.png" class="img41" width="100%" style="width: 100%; left: 50%; margin-left: -164.73px;"> </td>
+					</tr>
+					</tbody>
+				</table>
+			</form>
+			<div class="notice">如果你身边有这样的朋友，可以推荐给我们，成功入职会有奖励哦！</div>
+			<div class="company">北京新锐互动有限责任公司</div>
+   		</div>
+   </div>
+   <div class="main2"></div>
+   <div class="main3">
+	    <p class="m3" id="msg">先生/女士：</p>
+	    <div class="m31">很高兴您参与我们的前端开发工程师招募令.</div>
+	    <div class="m31"> 为了更全面了解您的个人情况，请于三天内用已登记的邮箱发送个人简历至lhy@geong.com。</div>
+	    <div class="m33"><span style="float: right;">北京新锐互动前端开发部</span><br></div>
+	    <div><button class="close" id="close">确认</button></div>
+   </div>
+   <img src="img/arrow.png" width="20%" class="arrow" style="display: block;">
+</div>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+//姓名匹配
+var regPartton=/^1[3-8]\d{9}$/;
+function nameCheck(){ 
+	var name =  $("#name").val();
+	$("#nameCheck").html("");
+	$("#msgerror").html("");
+	if(name == "" || name==null){
+		$("#name").focus();
+		$("#nameCheck").html("姓名不能为空");
+	}
+}
+//手机号匹配
+function phoneCheck(){
+	var phone =$("#phoneNum").val();
+	$("#phonecheck").html("");  
+	$("#msgerror").html("");
+	if(phone == "" || phone==null){
+	 $("#phoneNum").focus();
+	$("#phonecheck").html("手机号不能为空");
+	}else if(!regPartton.test(phone)) {
+	$("#phoneNum").focus(); 
+	$("#phonecheck").html("请输入正确的手机号");
+	 }
+}
+//邮箱匹配
+function emailCheck(){
+	var email =$("#email").val();
+	$("#emailcheck").html("");
+	$("#msgerror").html("");
+	if(email == "" || email==null){
+	 $("#email").focus();
+	$("#emailcheck").html("请输入邮箱地址");
+	}else{
+	 var index = email.indexOf("@");
+	if(index<0){
+	    $("#email").focus();
+	$("#emailcheck").html("请输入邮箱地址");
+	}else{
+	  var startStr = email.substring(0, index);
+	var endStr = email.substring(index);
+	var reg = /.*[\u4e00-\u9fa5]+.*$/;
+	if(startStr.length <= 0){
+	   $("#email").focus();
+	$("#emailcheck").html("请输入邮箱地址");
+	}else if(reg.test(startStr)){  //邮箱号不能有汉字
+	     $("#email").focus();
+	$("#emailcheck").html("请输入邮箱地址");
+	}
+	if(endStr.indexOf(".")<0){
+	  $("#email").focus();
+	  $("#emailcheck").html("请输入邮箱地址");
+	}else{
+	    var endStr1 = endStr.substring(endStr.indexOf("."));
+	    if(endStr1.length<3){
+	      $("#email").focus();
+	  $("#emailcheck").html("请输入邮箱地址");
+	    }
+	}
+	}
+	}
+}
+var num = 4;
+$(function(){
+
+	setTimeout(function(){
+		if($(window).width()/$(window).height() > 0.57){
+			$(".content img").css({"width":$(window).height()*0.57+"px","left":"50%"});
+			$(".content img").css("margin-left",-$(window).height()*0.285+"px");
+			$(".img41").css("width","100%");
+
+		}
+		$("#content1").show();     
+		if($("#content1 img").height() < $(window).height()){
+		$(".content .arrow").css("top","90%");
+		}
+	},200);
+
+	var i =0;
+	//事件类型
+	EVENT_TYPE = !!('ontouchend' in document) ? 'touchstart' : 'click';
+	var startPos;
+	window.addEventListener('touchstart',function(event){
+	  var target = event.target;
+	  while (target.nodeType != 1) {
+	  target = target.parentNode;
+	  }
+	  if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA' && target.tagName != 'BUTTON') { event.preventDefault();}
+	  startPos = {x:event.pageX,y:event.touches[0].pageY,time:+new Date};
+	},false);
+	window.addEventListener('touchend',function(event){
+	 var target = event.target;
+	  while (target.nodeType != 1) {
+	  target = target.parentNode;
+	  }
+	  if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA' && target.tagName != 'BUTTON') { event.preventDefault();}
+	　    endPos = {x:event.changedTouches[0].pageX - startPos.x,y:event.changedTouches[0].pageY - startPos.y};
+	  if(endPos.y > 20){  
+	     if(i == 0){}else{
+	       i--;
+	       $("#content1").stop();
+	       $("#content1").animate({"margin-top":-$(window).height()*i},50,function() {
+	          $(".content").hide();
+	          $("#content"+(i+1)).show();
+	       });
+	    } 
+	  }else if(endPos.y < -20){
+	    if(i == (num-1)){}else{ 
+	      i++;
+	      $("#content1").stop();
+	      $("#content1").animate({"margin-top":-$(window).height()*i},50,function() {
+	         $(".content").hide();
+	         $("#content"+(i+1)).show();
+	       
+	      });
+	    }
+	   }  
+	   if(i==  (num-1)){
+	         $(".arrow").hide();
+	    }else{
+	       $(".arrow").show();
+	    } 
+	},false);
+
+	$(".main").css("height",$(window).height());
+	$(".content").css("height",$(window).height());
+
+	document.getElementById("phoneNum").addEventListener("input",phoneCheck,false);
+	document.getElementById("name").addEventListener("input",nameCheck,false);
+	document.getElementById("email").addEventListener("input",emailCheck,false);
+	$("#close").click(function(){
+	$(".main2").hide();
+	$(".main3").hide();
+	$("#name").val("");
+	$("#phoneNum").val("");
+	$("#email").val("");
+	$("#msgerror").html("");
+	});
+
+	$("#submitBtn").click(function(){
+	var name =  $("#name").val();
+	var phone =$("#phoneNum").val();
+	 var email =$("#email").val();
+	$("#nameCheck").html("");
+	$("#phonecheck").html(""); 
+	 $("#emailcheck").html(""); 
+	    if(email == "" || email==null){
+	     $("#email").focus();
+	   $("#emailcheck").html("请输入邮箱地址");
+	  }
+	  if(phone == "" || phone==null){
+	     $("#phoneNum").focus();
+	   $("#phonecheck").html("手机号不能为空");
+	}else if(!regPartton.test(phone)) {
+	 $("#phoneNum").focus(); 
+	  $("#phonecheck").html("请输入正确的手机号");
+	     }
+	if(name == "" || name==null){
+	      $("#name").focus();
+	     $("#nameCheck").html("姓名不能为空");
+	   } 
+	if($("#phonecheck").html() == "" && $("#nameCheck").html() =="" && $("#email").html() ==""){
+	var aQuery = jQuery("#form1").serialize(); 
+	    $.ajax({
+	      url: "http://recruit.21cn.com/font_engineer_recruit/submit.do", // 提交的页面
+	      data: aQuery, // 从表单中获取数据
+	      dataType: 'jsonp',
+	      jsonp: 'callback',
+	      type: "post",                   // 设置请求类型为"POST"，默认为"GET"
+	      beforeSend: function()          // 设置表单提交前方法
+	     {
+	      },
+	      error: function(request) { // 设置表单提交出错
+	     },
+	     success: function(json) {// 设置表单提交完成使用方法
+	     if(json.result == 0){
+	      $("#msg").html($("#name").val()+"先生/女士：");
+	      $(".main2").show();
+	      $(".main3").show();
+	    }else if(json.result == -1){
+	     $("#msgerror").html("系统错误，请稍后再试");
+	    }else if(json.result == 1){
+	      $("#nameCheck").html("姓名不能为空");
+	       $("#name").focus();
+	    }else if(json.result == 2){
+	      $("#nameCheck").html("姓名的长度不应超过20位！");
+	       $("#name").focus();
+	    }else if(json.result == 3){
+	     $("#phonecheck").html("请填写正确的手机号码，方便我们与您联系！");
+	       $("#phoneNum").focus();
+	    }else if(json.result == 4){
+	     $("#emailcheck").html("请填写正确的邮箱地址，方便我们与您联系！");
+	       $("#email").focus();
+	    }
+	   }
+	}); 
+	}
+	});
+});
+
+
+</script> 
+
+
+</body>
+</html>
